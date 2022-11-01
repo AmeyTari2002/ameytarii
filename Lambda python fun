@@ -11,3 +11,8 @@ def lambda_handler(event, context):
         "Number1": number1, "Number2": number2, "Sum": sum, "Product": product, "Difference": difference, "Quotient": quotient 
         
     }
+Event Json
+{
+  "Number1": 25,
+  "Number2": 5
+}
