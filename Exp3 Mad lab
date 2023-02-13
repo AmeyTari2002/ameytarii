@@ -1,0 +1,97 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+
+  const MyApp({super.key});
+
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
+      home: const MyHomePage(title: 'Flutter Exp3 Buttons Amey Tari'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+
+      appBar: AppBar(
+
+        title: Text(widget.title),
+      ),
+      body:  Container(
+            padding: EdgeInsets.all(20),
+            margin: EdgeInsets.all(60),
+            alignment: Alignment.center,
+          child: Column(
+            children:[
+            OutlinedButton.icon(
+              onPressed: () {},
+              icon: Icon(
+                Icons.send,
+                color: Colors.black,
+              ),
+              label: Text("Send", style: TextStyle(fontSize: 24,fontStyle: FontStyle.italic, color: Colors.black),),
+            ),
+            TextButton.icon(
+              onPressed: () {},
+              icon: Icon(
+                Icons.download,
+                size: 50,
+                color: Colors.blueAccent,
+              ),
+              label: Text("Download", style: TextStyle(fontSize: 24,fontStyle: FontStyle.italic, color: Colors.blue),),
+            ),
+            OutlinedButton.icon(
+              onPressed: () {},
+              icon: Icon(
+                Icons.message,
+                size: 60,
+                color:Colors.redAccent,
+              ),
+              label: Text("Message", style: TextStyle(fontSize: 24,fontStyle: FontStyle.italic),),
+            ),
+            ElevatedButton.icon(
+              onPressed: () { },
+              icon: Icon(
+                Icons.phone,
+                size: 50,
+              ),
+              label: Text("Elevated button", style: TextStyle(fontSize: 24,fontStyle: FontStyle.italic, color: Colors.black),),
+            )
+
+          ]
+          )
+
+      ),
+
+    );
+  }
+}
